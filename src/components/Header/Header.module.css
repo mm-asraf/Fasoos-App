@@ -1,0 +1,86 @@
+.main {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+.first_half {
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 1rem;
+}
+
+.logo {
+  width: 6rem;
+  margin-right: 4rem;
+}
+
+.second_half {
+  position: relative;
+  top: 1rem;
+  display: flex;
+}
+
+.input_box {
+  width: 30rem;
+  background-color: #ffffff;
+  position: relative;
+  box-shadow: 0 0.5px 7px rgba(0, 0, 0, 0.26);
+  left: 2rem;
+}
+
+.input_box > input {
+  width: 90%;
+  height: 1.9rem;
+  outline: none;
+  font-size: 18px;
+  border: none;
+}
+
+/* @media screen and (min-width: 955px) {
+  .input_box {
+    width: 25rem;
+    background-color: #ffffff;
+    position: relative;
+    box-shadow: 0 0.5px 7px rgba(0, 0, 0, 0.26);
+    left: 2rem;
+  }
+  .input_box > input {
+    width: 80%;
+    height: 1.9rem;
+    outline: none;
+    font-size: 18px;
+    border: none;
+  }
+  .searchIcon {
+    position: relative;
+    font-size: 1.8rem;
+  }
+} */
+
+.searchIcon {
+  position: relative;
+  font-size: 1.8rem;
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+.menu {
+  position: relative;
+  left: 2.5rem;
+  font-size: 2rem;
+}
+
+.headset {
+  position: relative;
+  right: 3rem;
+  font-size: 2rem;
+}
+.cart {
+  font-size: 2rem;
+}
