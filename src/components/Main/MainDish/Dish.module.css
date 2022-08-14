@@ -1,14 +1,64 @@
 .card {
-  position: relative;
-  left: 4rem;
+  /* position: relative;
+  left: 4rem; */
   display: grid;
   grid-template-columns: repeat(3, auto);
-  gap: 0px;
-  top: 10rem;
+  gap: 30px;
+  margin-left: 4rem;
+  position: static;
+  margin-top: 6rem;
+  margin-bottom: 5rem;
+  overflow: scroll;
+  /* top: 6rem; */
 }
 
 .card_set {
   position: relative;
   top: 2rem;
   left: 2rem;
+}
+
+.contain_img > img {
+  width: 220px;
+  margin-left: 15px;
+}
+
+.contain_img {
+  padding: 4px;
+}
+
+.container {
+  padding: 5px;
+}
+
+.container > h4 {
+  width: 90%;
+  position: relative;
+  left: 5px;
+}
+
+.container > p {
+  position: relative;
+  left: 5px;
+}
+
+.bt {
+  display: flex;
+}
+
+.bt > button {
+  width: 90px;
+  position: relative;
+  left: 100px;
+  height: 35px;
+  border: 1px solid #56ffbb;
+  background-color: #ffffff;
+  color: #2b3a34;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+.bt > p {
+  position: relative;
+  bottom: 10px;
+  left: 4px;
 }
