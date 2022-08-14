@@ -8,7 +8,7 @@ const MainDish = () => {
       <div className="side">
         <Side />
       </div>
-      <div className="dish">
+      <div className={classes.dish}>
         <Dish />
       </div>
     </div>

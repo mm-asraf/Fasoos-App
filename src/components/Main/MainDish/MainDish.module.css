@@ -1,3 +1,7 @@
 .main_dish {
   display: flex;
 }
+
+.dish {
+  margin-left: 20px;
+}
