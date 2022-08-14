@@ -6,3 +6,31 @@
   top: 3rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
+
+.inp {
+  width: 500px;
+  display: flex;
+  position: relative;
+  top: 30px;
+  left: 20px;
+  height: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+.inp > input {
+  width: 90%;
+  position: relative;
+  top: 6px;
+  height: 60%;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  left: 5px;
+  /* text-align: center; */
+}
+
+.search {
+  position: relative;
+  top: 5px;
+  font-size: 30px;
+}

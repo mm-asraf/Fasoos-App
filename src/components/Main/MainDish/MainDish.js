@@ -10,7 +10,7 @@ const MainDish = () => {
         <Side />
       </div>
       <div className={classes.dish}>
-        <Filter />
+        {/* <Filter /> */}
         <Dish />
       </div>
     </div>
