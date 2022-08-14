@@ -1,8 +1,9 @@
 import React from "react";
-import Main from "../Main/Main";
+import MainCard from "../../UI/MainCard";
+import classes from "./Dish.module.css";
 
 const Dish = () => {
-  return <Main>Dish</Main>;
+  return <MainCard className={classes.card}></MainCard>;
 };
 
 export default Dish;
