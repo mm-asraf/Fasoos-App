@@ -4,7 +4,7 @@ import classes from "./Dish.module.css";
 const DishItem = ({ data }) => {
   return (
     <div>
-      <Card className={classes.card_set}>
+      <Card className={classes.card_set} key={data.id}>
         <div className={classes.container}>
           <div className={classes.contain_img}>
             <img src={data.img} alt="food" />

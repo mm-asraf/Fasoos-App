@@ -8,6 +8,7 @@ import Filter from "../Filter/Filter";
 
 const Dish = () => {
   const [foodData, setFoodData] = useState([]);
+  const [price, setPrice] = useState([]);
 
   useEffect(() => {
     const getFood = async () => {
@@ -15,29 +16,51 @@ const Dish = () => {
         "https://ig-food-menus.herokuapp.com/best-foods"
       );
       const data = await response.json();
+
       setFoodData(data);
       // console.log(data);
     };
     getFood();
   }, []);
 
-  const search = (event) => {
+  const filterSearch = async (event) => {
     const val = event.target.value.toLowerCase();
     const filterByName = foodData.filter((food) =>
-      `${food.name}`.toLowerCase().includes(val)
+      `${food.name} ${food.dsc}`.toLowerCase().includes(val)
     );
 
-    setFoodData(filterByName);
+    if (val) {
+      setFoodData(filterByName);
+    } else {
+      setFoodData(foodData);
+    }
 
     console.log(filterByName);
   };
 
+  useEffect(() => {
+    const res = foodData.sort((a, b) => {
+      if (price === "high to low") {
+        return b.price - a.price;
+      } else {
+        return a.price - b.price;
+      }
+    });
+    // setFoodData(res);
+    setPrice(res);
+    console.log(res);
+  }, [price]);
+
   return (
     <>
-      <Filter onSearch={search} />
+      <Filter onSearch={filterSearch} onSetPrice={setPrice} />
       <MainCard className={classes.card}>
         {foodData.slice(0, 20).map((item) => {
-          return <DishItem data={item} />;
+          if (item) {
+            return <DishItem key={item.id} data={item} />;
+          } else {
+            return null;
+          }
         })}
       </MainCard>
     </>
